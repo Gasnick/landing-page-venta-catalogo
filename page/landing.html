@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo Lolynar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+        }
+
+        .pdf-container {
+            width: 70%;
+            height: 100vh;
+            border-right: 1px solid #ccc;
+        }
+
+        .form-container {
+            width: 30%;
+            padding: 20px;
+            background-color: #f9f9f9;
+            overflow-y: auto;
+        }
+
+        .form-container h2 {
+            margin-top: 0;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #007acc;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            background: #e0f0ff;
+            margin: 5px 0;
+            padding: 8px 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .botones {
+            display: flex;
+            gap: 5px;
+        }
+
+        .botones button {
+            width: auto;
+            padding: 5px 8px;
+            background-color: transparent;
+            color: #333;
+        }
+
+        .botones button:hover {
+            color: red;
+        }
+
+        .acciones {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="pdf-container">
+        <iframe id="visor" width="100%" height="100%"></iframe>
+    </div>
+
+    <div class="form-container">
+        <h2>Anotar producto</h2>
+        <input type="text" id="producto" placeholder="Nombre del producto">
+        <input type="number" id="pagina" placeholder="Página">
+        <button onclick="agregarNota()">Agregar</button>
+
+        <h3>Mis notas</h3>
+        <ul id="listaNotas"></ul>
+
+        <div class="acciones">
+            <button onclick="descargarNotas()">Enviar pedido por WhatsApp</button>
+        </div>
+    </div>
+
+    <template id="notaTemplate">
+        <li>
+            <span class="texto-nota"></span>
+            <div class="botones">
+                <button onclick="editarNota(this)">✏️</button>
+                <button onclick="eliminarNota(this)">🗑️</button>
+            </div>
+        </li>
+    </template>
+
+    <script>
+        // Obtener parámetro `pdf` de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const pdfFile = urlParams.get("pdf") || "catalogo.pdf";
+        document.getElementById("visor").src = pdfFile;
+
+        const storageKey = "notas_" + pdfFile;
+
+        function guardarEnLocalStorage() {
+            const notas = [];
+            document.querySelectorAll("#listaNotas li .texto-nota").forEach(span => {
+                notas.push(span.textContent);
+            });
+            localStorage.setItem(storageKey, JSON.stringify(notas));
+        }
+
+        function cargarDesdeLocalStorage() {
+            const notas = JSON.parse(localStorage.getItem(storageKey) || "[]");
+            notas.forEach(texto => {
+                const template = document.getElementById("notaTemplate");
+                const clone = template.content.cloneNode(true);
+                clone.querySelector(".texto-nota").textContent = texto;
+                document.getElementById("listaNotas").appendChild(clone);
+            });
+        }
+
+        function agregarNota() {
+            const producto = document.getElementById("producto").value.trim();
+            const pagina = document.getElementById("pagina").value.trim();
+
+            if (producto && pagina) {
+                const template = document.getElementById("notaTemplate");
+                const clone = template.content.cloneNode(true);
+                clone.querySelector(".texto-nota").textContent = `${producto} (p. ${pagina})`;
+                document.getElementById("listaNotas").appendChild(clone);
+
+                document.getElementById("producto").value = "";
+                document.getElementById("pagina").value = "";
+
+                guardarEnLocalStorage();
+            }
+        }
+
+        function eliminarNota(btn) {
+            const li = btn.closest("li");
+            li.remove();
+            guardarEnLocalStorage();
+        }
+
+        function editarNota(btn) {
+            const li = btn.closest("li");
+            const textoNota = li.querySelector(".texto-nota").textContent;
+
+            const match = textoNota.match(/^(.*) \(p\. (\d+)\)$/);
+            if (!match) return;
+
+            const producto = match[1];
+            const pagina = match[2];
+
+            const nuevoProducto = prompt("Editar producto:", producto);
+            const nuevaPagina = prompt("Editar página:", pagina);
+
+            if (nuevoProducto && nuevaPagina) {
+                li.querySelector(".texto-nota").textContent = `${nuevoProducto} (p. ${nuevaPagina})`;
+                guardarEnLocalStorage();
+            }
+        }
+
+        function descargarNotas() {
+            const notas = [];
+            document.querySelectorAll("#listaNotas li .texto-nota").forEach(span => {
+                notas.push(span.textContent);
+            });
+
+            const mensajeTexto = notas.join("\n");
+            const mensajeFinal = `Hola, te envío el pedido del catálogo ${pdfFile}:\n\n${mensajeTexto}`;
+            const mensajeURL = encodeURIComponent(mensajeFinal);
+
+            const linkWsp = `https://wa.me/?text=${mensajeURL}`;
+            window.open(linkWsp, "_blank");
+        }
+
+        window.onload = cargarDesdeLocalStorage;
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Lolynar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fdfdfd;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #ffb6c1, #ff69b4);
+            padding: 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .cta-button {
+            background: white;
+            color: #ff1493;
+            padding: 0.8rem 1.5rem;
+            font-weight: bold;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #ffe4ec;
+        }
+
+        section {
+            padding: 2rem 1rem;
+        }
+
+        .section-content {
+            max-width: 800px;
+            margin: auto;
+        }
+
+
+        h2 {
+            color: #ff1493;
+        }
+
+        .benefits ul,
+        .faq ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits li,
+        .faq li {
+            padding: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .catalog-list a {
+            display: block;
+            background: #fff;
+            border: 1px solid #eee;
+            margin: 1rem 0;
+            padding: 1rem;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .catalog-list a:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 2rem;
+        }
+
+        .testimonials {
+            background-color: #f9f9f9;
+            border-left: 5px solid #ff69b4;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        input,
+        textarea {
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        button {
+            background: #ff69b4;
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #e048a0;
+        }
+
+        .faq li {
+            margin-bottom: 1rem;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            font-size: 2rem;
+        }
+
+        .facebook {
+            color: #3b5998;
+        }
+
+        .instagram {
+            color: #e1306c;
+        }
+
+        footer {
+            background: #eee;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        /* Alternancia de fondo entre secciones */
+        section:nth-of-type(odd) {
+            background-color: #ffffff;
+            /* Blanco */
+        }
+
+        section:nth-of-type(even) {
+            background-color: #ffe4ec;
+            /* Rosa claro */
+        }
+
+        /* Transiciones suaves */
+        section {
+            transition: background-color 0.5s ease;
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <header>
+        <h1>Catálogo de Lolynar</h1>
+        <p>Productos Tupperware, Violeta y Millanel al mejor precio</p>
+        <a href="#pedir" class="cta-button">Quiero hacer un pedido</a>
+    </header>
+
+    <section class="benefits">
+        <div class="section-content">
+            <h2>¿Por qué elegir Lolynar?</h2>
+            <ul>
+                <li>✅ Atención personalizada por WhatsApp</li>
+                <li>🚚 Entrega a domicilio en La Rioja Capital</li>
+                <li>🎁 Promos exclusivas para clientas frecuentes</li>
+                <li>📆 Pedidos semanales garantizados</li>
+                <li>💳 Pagos flexibles y sin complicaciones</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="catalogs">
+        <div class="section-content">
+            <h2>Catálogos disponibles</h2>
+            <div class="catalog-list">
+                <a href="page/landing.html?pdf=cat-tupper.pdf"" target=" _blank">📘 Ver Catálogo Tupperware</a>
+                <a href="page/landing.html?pdf=cat-violetta.pdf" target="_blank">📗 Ver Catálogo Violeta</a>
+                <a href="page/landing.html?pdf=cat-millanel.pdf" target="_blank">📕 Ver Catálogo Millanel</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonios">
+        <div class="section-content">
+        </div>
+        <h2>Lo que dicen nuestras clientas</h2>
+        <div class="testimonials">
+            <p>“Siempre le compro a Lolynar. Tiene todo actualizado, me responde rápido y me lo trae a
+                casa.”<br><strong>— Luciana R.</strong></p>
+        </div>
+        <div class="testimonials">
+            <p>“Los productos son excelentes, y me encanta que me avisa cuando hay promos nuevas.”<br><strong>— Mariana
+                    T.</strong></p>
+        </div>
+        <div class="testimonials">
+            <p>“Confiable y super organizada. Se nota que ama lo que hace.”<br><strong>— Florencia M.</strong></p>
+        </div>
+        </div>
+    </section>
+
+    <section id="formulario">
+        <div class="section-content">
+            <h2>¿Querés recibir novedades?</h2>
+            <p>Dejame tus datos y te aviso cuando haya lanzamientos o promos especiales:</p>
+            <form action="https://formsubmit.co/TU_CORREO@ejemplo.com" method="POST">
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+                <input type="email" name="email" placeholder="Tu email o celular" required>
+                <textarea name="mensaje" placeholder="¿Qué te interesa? (Tupperware, Millanel, etc)"></textarea>
+                <button type="submit">Quiero recibir novedades</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="section-content">
+            <h2>Preguntas frecuentes</h2>
+            <ul>
+                <li><strong>¿Dónde estás ubicada?</strong> En La Rioja Capital, Argentina.</li>
+                <li><strong>¿Hacés entregas?</strong> Sí, entregas a domicilio o puntos de encuentro.</li>
+                <li><strong>¿Cuáles son las formas de pago?</strong> Efectivo, transferencia o MercadoPago.</li>
+                <li><strong>¿Cada cuánto hay nuevos catálogos?</strong> Por lo general, todos los meses.</li>
+                <li><strong>¿Hay promociones?</strong> Sí, cada campaña tiene promos especiales.</li>
+                <li><strong>¿Tengo que comprar un mínimo?</strong> No, podés comprar lo que necesites.</li>
+                <li><strong>¿Puedo hacer consultas por WhatsApp?</strong> ¡Claro! Te respondo lo antes posible.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="pedir" class="whatsapp">
+        <div class="section-content">
+            <h2>¿Querés hacer un pedido ahora?</h2>
+            <p>Escribime directamente por WhatsApp y te ayudo con tu compra 👇</p>
+            <a class="whatsapp-btn"
+                href="https://wa.me/5493804252900?text=Hola%20Lolynar!%20Vi%20los%20catálogos%20y%20quiero%20hacer%20un%20pedido."
+                target="_blank">
+                🛍️ Hacer pedido por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <section class="social">
+        <div class="section-content">
+            <h2>¡Seguime en redes!</h2>
+            <div class="social-icons">
+                <a href="https://facebook.com/lolynar" target="_blank" class="facebook"><i
+                        class="fab fa-facebook-square"></i></a>
+                <a href="https://instagram.com/lolynar" target="_blank" class="instagram"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Catálogo de Lolynar | La Rioja, Argentina</p>
+        <p>Hecho con 💻 por su esposo desarrollador 😊</p>
+    </footer>
+
+</body>
+
+</html>
