@@ -1,0 +1,10 @@
+FUNCIONALIDADES
+-Poder ver las cartillas haciendo clic en botones
+-Poder hacer los pedidos por separados
+-Botón para enviar pedido
+-Formulario para enviar datos y luego recibir las cartillas o algún mensaje vía mail
+-Registrarse / Login
+-Historial de compras de clientas registradas
+-Ofrecer promociones a clientas frecuentes
+-Sitio responsive
+-Formulario para poder dejar comentarios (para los que se registran)
