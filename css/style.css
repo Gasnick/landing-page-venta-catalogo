@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background: linear-gradient(to right, #ffb6c1, #ff69b4);
+    background: linear-gradient(to right, #ffb6c1, #ff2693);
     padding: 2rem;
     text-align: center;
     color: white;
@@ -42,11 +42,6 @@ section {
 .section-content {
     max-width: 800px;
     margin: auto;
-}
-
-
-h2 {
-    color: #ff1493;
 }
 
 .benefits ul,
@@ -113,7 +108,7 @@ textarea {
 }
 
 button {
-    background: #ff69b4;
+    background: #380623;
     color: white;
     padding: 1rem;
     border: none;
@@ -123,7 +118,7 @@ button {
 }
 
 button:hover {
-    background: #e048a0;
+    background: #c315da;
 }
 
 .faq li {
@@ -161,11 +156,13 @@ footer {
 /* Alternancia de fondo entre secciones */
 section:nth-of-type(odd) {
     background-color: #ffffff;
+    color: black;
     /* Blanco */
 }
 
 section:nth-of-type(even) {
-    background-color: #ffe4ec;
+    background-color: #df1e58;
+    color: white;
     /* Rosa claro */
 }
 
