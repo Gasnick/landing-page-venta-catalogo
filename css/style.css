@@ -28,10 +28,12 @@ body {
 }
 
 .nav-logo {
-    font-size: 1.5rem;
-    color: #ff69b4;
-    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #ff1493;
+    font-weight: 700;
 }
+
 
 .nav-links {
     list-style: none;
