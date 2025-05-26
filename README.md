@@ -8,3 +8,4 @@ FUNCIONALIDADES
 -Ofrecer promociones a clientas frecuentes
 -Sitio responsive
 -Formulario para poder dejar comentarios (para los que se registran)
+-Menu superior que tenga el botón "Registrarse" y "Contactar con Lolynar"
