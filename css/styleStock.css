@@ -1,1 +1,91 @@
+.stock-container {
+    display: grid;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
 
+.product-card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stock-section.tupperware .product-card {
+    background-color: #ffe4f1;
+    /* Rosa claro */
+}
+
+.stock-section.violetta .product-card {
+    background-color: #f3d1f3;
+    /* Violeta claro */
+}
+
+.stock-section.millanel .product-card {
+    background-color: #d9f4f0;
+    /* Verde agua claro */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 1rem;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.product-info {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.product-price {
+    margin-top: 1rem;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: red;
+    margin-right: 0.5rem;
+}
+
+.new-price {
+    font-weight: bold;
+    color: #000000;
+}
+
+.stock-title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 3rem 0 2rem;
+    font-weight: bold;
+}
+
+.stock-title.tupperware {
+    color: #ff69b4;
+}
+
+.stock-title.violetta {
+    color: #b30086;
+}
+
+.stock-title.millanel {
+    color: #009688;
+}

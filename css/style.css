@@ -89,17 +89,11 @@ body {
 /* Botón ver stock */
 .stock-btn {
     background: #ff1493;
-    color: white;
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
+    color: white !important; 
+    padding: 1rem 1rem;
     border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s, background 0.3s;
-    display: inline-block;
-    margin: 2rem auto;
-    text-align: center;
 }
 
 .stock-btn:hover {
@@ -355,14 +349,14 @@ footer {
     margin-top: 2rem;
 }
 
-/* Alternancia de fondo entre secciones */
-section:nth-of-type(odd) {
+/* Alternancia de fondo entre seccionesm, salvo en stock.html */
+body:not(.stock-page) section:nth-of-type(odd) {
     background-color: #ffffff;
     color: black;
     /* Blanco */
 }
 
-section:nth-of-type(even) {
+body:not(.stock-page) section:nth-of-type(even) {
     background-color: #df1e58;
     color: white;
     /* Rosa claro */

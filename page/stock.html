@@ -5,92 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock disponible - Lolynar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        .stock-container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 2rem 1rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-        }
-
-        .product-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .product-details {
-            padding: 1rem;
-        }
-
-        .product-name {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .product-info {
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-            color: #666;
-        }
-
-        .product-price {
-            margin-top: 1rem;
-        }
-
-        .old-price {
-            text-decoration: line-through;
-            color: red;
-            margin-right: 0.5rem;
-        }
-
-        .new-price {
-            font-weight: bold;
-            color: #ff1493;
-        }
-
-        .stock-title {
-            font-size: 2rem;
-            text-align: center;
-            margin: 3rem 0 2rem;
-            font-weight: bold;
-        }
-
-        .stock-title.tupperware {
-            color: #ff69b4;
-            /* Rosa intenso */
-        }
-
-        .stock-title.violetta {
-            color: #b30086;
-            /* Violeta fuerte */
-        }
-
-        .stock-title.millanel {
-            color: #009688;
-            /* Verde suave */
-        }
-    </style>
+    <link rel="stylesheet" href="../css/styleStock.css">
 </head>
 
-<body>
+<body class="stock-page">
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">Lolynar</div>
@@ -105,7 +25,7 @@
     </header>
 
     <main>
-        <section class="stock-section">
+        <section class="stock-section tupperware">
             <h2 class="stock-title tupperware">Tupperware</h2>
             <div class="stock-container">
                 <!-- Fila 1 -->
@@ -159,7 +79,7 @@
             </div>
         </section>
 
-        <section class="stock-section">
+        <section class="stock-section violetta">
             <h2 class="stock-title violetta">Violetta</h2>
             <div class="stock-container">
                 <!-- Fila 2 -->
@@ -213,7 +133,7 @@
             </div>
         </section>
 
-        <section class="stock-section">
+        <section class="stock-section millanel">
             <h2 class="stock-title millanel">Millanel</h2>
             <div class="stock-container">
                 <!-- Fila 3 -->
@@ -268,11 +188,17 @@
         </section>
     </main>
 
-
-
-
-
-
+        <section id="pedir" class="whatsapp">
+        <div class="section-content">
+            <h2>¿Querés hacer un pedido ahora?</h2>
+            <p>Escribime directamente por WhatsApp y te ayudo con tu compra 👇</p>
+            <a class="whatsapp-btn"
+                href="https://wa.me/5493804252900?text=Hola%20Lolynar!%20Vi%20los%20catálogos%20y%20quiero%20hacer%20un%20pedido."
+                target="_blank">
+                🛍️ Hacer pedido por WhatsApp
+            </a>
+        </div>
+    </section>
 
     <footer>
         &copy; 2025 Lolynar. Todos los derechos reservados.

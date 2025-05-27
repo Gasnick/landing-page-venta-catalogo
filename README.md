@@ -4,7 +4,6 @@ FUNCIONALIDADES
 -Registrarse / Login
 -Historial de compras de clientas registradas
 -Ofrecer promociones a clientas frecuentes
--Sitio responsive
 -Formulario para poder dejar comentarios (para los que se registran)
 -Temporizador de ofertas
 
@@ -16,3 +15,4 @@ FUNCIONAL. COMPLETADAS
 -Botones para redireccionar a redes sociales
 -Menu superior que tenga el botón "Registrarse" y "Contactar con Lolynar"
 -Botón de "¡Tengo en stock!"
+-Sitio responsive
