@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock disponible - Lolynar</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .stock-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-details {
+            padding: 1rem;
+        }
+
+        .product-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-info {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .product-price {
+            margin-top: 1rem;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: red;
+            margin-right: 0.5rem;
+        }
+
+        .new-price {
+            font-weight: bold;
+            color: #ff1493;
+        }
+
+        .stock-title {
+            font-size: 2rem;
+            text-align: center;
+            margin: 3rem 0 2rem;
+            font-weight: bold;
+        }
+
+        .stock-title.tupperware {
+            color: #ff69b4;
+            /* Rosa intenso */
+        }
+
+        .stock-title.violetta {
+            color: #b30086;
+            /* Violeta fuerte */
+        }
+
+        .stock-title.millanel {
+            color: #009688;
+            /* Verde suave */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Lolynar</div>
+            <ul class="nav-links">
+                <li><a href="../index.html" class="nav-link">Inicio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Stock Disponible</h1>
+    </header>
+
+    <main>
+        <section class="stock-section">
+            <h2 class="stock-title tupperware">Tupperware</h2>
+            <div class="stock-container">
+                <!-- Fila 1 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Producto 1" class="product-image">
+                    <div class="product-details">
+                        <div class="product-name">Shampoo Revitalizante</div>
+                        <div class="product-info">Color: Rosa | Tamaño: 500ml | Cód: SH001</div>
+                        <div class="product-price">
+                            <span class="old-price">$3.000</span>
+                            <span class="new-price">$2.300</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Producto 2" class="product-image">
+                    <div class="product-details">
+                        <div class="product-name">Crema Corporal Hidratante</div>
+                        <div class="product-info">Color: Blanco | Tamaño: 250ml | Cód: CR102</div>
+                        <div class="product-price">
+                            <span class="old-price">$2.000</span>
+                            <span class="new-price">$1.600</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Producto 3" class="product-image">
+                    <div class="product-details">
+                        <div class="product-name">Perfume Lolynar Femme</div>
+                        <div class="product-info">Contenido: 100ml | Cód: PF003</div>
+                        <div class="product-price">
+                            <span class="old-price">$5.000</span>
+                            <span class="new-price">$4.100</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Producto 4" class="product-image">
+                    <div class="product-details">
+                        <div class="product-name">Aceite de Argán</div>
+                        <div class="product-info">Tamaño: 100ml | Cód: AC220</div>
+                        <div class="product-price">
+                            <span class="old-price">$4.500</span>
+                            <span class="new-price">$3.800</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stock-section">
+            <h2 class="stock-title violetta">Violetta</h2>
+            <div class="stock-container">
+                <!-- Fila 2 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Producto 5" class="product-image">
+                    <div class="product-details">
+                        <div class="product-name">Serum Facial Antiedad</div>
+                        <div class="product-info">Contenido: 50ml | Cód: SE520</div>
+                        <div class="product-price">
+                            <span class="old-price">$3.200</span>
+                            <span class="new-price">$2.700</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Producto 6" class="product-image">
+                    <div class="product-details">
+                        <div class="product-name">Jabón Natural Lavanda</div>
+                        <div class="product-info">Peso: 120g | Cód: JB304</div>
+                        <div class="product-price">
+                            <span class="old-price">$1.200</span>
+                            <span class="new-price">$900</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Producto 7" class="product-image">
+                    <div class="product-details">
+                        <div class="product-name">Kit Manos Suaves</div>
+                        <div class="product-info">Incluye: Crema + Jabón | Cód: KT909</div>
+                        <div class="product-price">
+                            <span class="old-price">$3.700</span>
+                            <span class="new-price">$2.900</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Producto 8" class="product-image">
+                    <div class="product-details">
+                        <div class="product-name">Tónico Facial</div>
+                        <div class="product-info">Contenido: 200ml | Cód: TN800</div>
+                        <div class="product-price">
+                            <span class="old-price">$2.100</span>
+                            <span class="new-price">$1.700</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stock-section">
+            <h2 class="stock-title millanel">Millanel</h2>
+            <div class="stock-container">
+                <!-- Fila 3 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Producto 9" class="product-image">
+                    <div class="product-details">
+                        <div class="product-name">Crema de Peinar</div>
+                        <div class="product-info">Tamaño: 300ml | Cód: CP110</div>
+                        <div class="product-price">
+                            <span class="old-price">$2.300</span>
+                            <span class="new-price">$1.900</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Producto 10" class="product-image">
+                    <div class="product-details">
+                        <div class="product-name">Mascarilla Nutritiva</div>
+                        <div class="product-info">Tamaño: 250ml | Cód: MS300</div>
+                        <div class="product-price">
+                            <span class="old-price">$3.900</span>
+                            <span class="new-price">$3.200</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Producto 11" class="product-image">
+                    <div class="product-details">
+                        <div class="product-name">Perfume Lolynar Fresh</div>
+                        <div class="product-info">Contenido: 100ml | Cód: PF010</div>
+                        <div class="product-price">
+                            <span class="old-price">$4.800</span>
+                            <span class="new-price">$4.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Producto 12" class="product-image">
+                    <div class="product-details">
+                        <div class="product-name">Bálsamo Labial</div>
+                        <div class="product-info">Peso: 15g | Cód: BL012</div>
+                        <div class="product-price">
+                            <span class="old-price">$1.000</span>
+                            <span class="new-price">$800</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+
+    <footer>
+        &copy; 2025 Lolynar. Todos los derechos reservados.
+    </footer>
+</body>
+
+</html>

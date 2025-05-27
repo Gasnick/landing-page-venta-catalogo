@@ -6,8 +6,7 @@ FUNCIONALIDADES
 -Ofrecer promociones a clientas frecuentes
 -Sitio responsive
 -Formulario para poder dejar comentarios (para los que se registran)
--Menu superior que tenga el botón "Registrarse" y "Contactar con Lolynar"
--Botón de "¡Tengo en stock!"
+-Temporizador de ofertas
 
 FUNCIONAL. COMPLETADAS
 -Poder ver las cartillas haciendo clic en botones
@@ -15,3 +14,5 @@ FUNCIONAL. COMPLETADAS
 -Botón para enviar pedido
 -Secciones bien diferenciadas
 -Botones para redireccionar a redes sociales
+-Menu superior que tenga el botón "Registrarse" y "Contactar con Lolynar"
+-Botón de "¡Tengo en stock!"
