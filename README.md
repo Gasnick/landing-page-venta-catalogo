@@ -1,8 +1,6 @@
 FUNCIONALIDADES
-
 -Historial de compras de clientas registradas
 -Ofrecer promociones a clientas frecuentes
--Formulario para poder dejar comentarios (para los que se registran)
 -Temporizador de ofertas
 
 FUNCIONAL. COMPLETADAS
@@ -16,3 +14,4 @@ FUNCIONAL. COMPLETADAS
 -Sitio responsive
 -Registrarse / Login
 -Formulario para enviar datos y luego recibir las cartillas o algún mensaje vía mail
+-Formulario para poder dejar comentarios (para los que se registran)
