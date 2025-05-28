@@ -32,6 +32,16 @@ document.getElementById("formRegistro").addEventListener("submit", async functio
             promociones,
             fecha: new Date().toISOString()
         });
+
+        //Para enviar los mails con EMAILJS
+        await emailjs.send("service_ejbz0ot", "template_19ts187", {
+            nombre,
+            telefono,
+            email,
+            interes,
+            promociones: promociones ? "Sí" : "No"
+        });
+
         alert("¡Registro exitoso!");
         document.getElementById("formRegistro").reset();
         document.getElementById('modalRegistro').style.display = 'none';
