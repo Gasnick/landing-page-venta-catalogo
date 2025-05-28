@@ -33,6 +33,8 @@ document.getElementById("formRegistro").addEventListener("submit", async functio
             fecha: new Date().toISOString()
         });
 
+        localStorage.setItem("clienteEmail", email);
+
         //Para enviar los mails con EMAILJS
         await emailjs.send("service_ejbz0ot", "template_19ts187", {
             nombre,

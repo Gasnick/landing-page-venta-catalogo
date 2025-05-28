@@ -74,18 +74,8 @@
         </div>
     </section>
 
-    <section id="formulario">
-        <div class="section-content">
-            <h2>¿Querés recibir novedades?</h2>
-            <p>Dejame tus datos y te aviso cuando haya lanzamientos o promos especiales:</p>
-            <form action="https://formsubmit.co/TU_CORREO@ejemplo.com" method="POST">
-                <input type="text" name="nombre" placeholder="Tu nombre" required>
-                <input type="email" name="email" placeholder="Tu email o celular" required>
-                <textarea name="mensaje" placeholder="¿Qué te interesa? (Tupperware, Millanel, etc)"></textarea>
-                <button type="submit">Quiero recibir novedades</button>
-            </form>
-        </div>
-    </section>
+
+
 
     <section id="faq" class="faq">
         <div class="section-content">
@@ -111,6 +101,17 @@
                 target="_blank">
                 🛍️ Hacer pedido por WhatsApp
             </a>
+        </div>
+    </section>
+
+    <section id="formulario" style="display: none;">
+        <div class="section-content">
+            <h2>¿Querés dejarnos un comentario?</h2>
+            <p>Contanos qué te pareció el catálogo, o si querés que sumemos algo nuevo:</p>
+            <form id="comentarioForm">
+                <textarea name="comentario" placeholder="Escribí tu comentario..." required></textarea>
+                <button type="submit">Enviar comentario</button>
+            </form>
         </div>
     </section>
 
@@ -184,6 +185,7 @@
 
 </body>
 
+<script type="module" src="js/validarCliente.js"></script>
 <script src="js/menu-principal.js"></script>
 <script type="module" src="js/registro.js"></script>
 

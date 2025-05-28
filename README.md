@@ -1,6 +1,5 @@
 FUNCIONALIDADES
 
--Formulario para enviar datos y luego recibir las cartillas o algún mensaje vía mail
 -Historial de compras de clientas registradas
 -Ofrecer promociones a clientas frecuentes
 -Formulario para poder dejar comentarios (para los que se registran)
@@ -16,3 +15,4 @@ FUNCIONAL. COMPLETADAS
 -Botón de "¡Tengo en stock!"
 -Sitio responsive
 -Registrarse / Login
+-Formulario para enviar datos y luego recibir las cartillas o algún mensaje vía mail
