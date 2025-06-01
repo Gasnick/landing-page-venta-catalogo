@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
 
-// Tu config copiada del paso anterior
+// Configuración del firebase
 const firebaseConfig = {
     apiKey: "AIzaSyBU-x_Uly6Fw5Cq_baDX-vrWrWQ5TrM87I",
     authDomain: "lolynar-clientes.firebaseapp.com",
